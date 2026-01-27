@@ -3,3 +3,6 @@
 *.pdb 
 .vs/ 
 logs/
+x64/
+Debug/
+Release/
