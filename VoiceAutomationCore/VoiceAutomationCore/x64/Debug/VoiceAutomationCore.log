@@ -1,4 +1,4 @@
-﻿  open_notepad.cpp
-  VoiceAutomationCore.cpp
+﻿  CommandRegistry.cpp
+  main.cpp
   Generating Code...
   VoiceAutomationCore.vcxproj -> C:\Users\sumit\Documents\Projects\WindowsVoiceAutomation\VoiceAutomationCore\x64\Debug\VoiceAutomationCore.exe

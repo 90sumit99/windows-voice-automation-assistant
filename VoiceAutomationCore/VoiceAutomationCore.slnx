@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="VoiceAutomationCore/VoiceAutomationCore.vcxproj" />
+  <Project Path="VoiceAutomationCore/VoiceAutomationCore.vcxproj" Id="95412bc1-4bc6-464f-a878-a81950472e53" />
 </Solution>
