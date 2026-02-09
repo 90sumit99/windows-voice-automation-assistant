@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,14 +128,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\cpp_core\src\open_notepad.cpp" />
-    <ClCompile Include="CommandRegistry.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\ApplicationLauncher.cpp" />
+    <ClCompile Include="src\AudioController.cpp" />
+    <ClCompile Include="src\CommandParser.cpp" />
+    <ClCompile Include="src\CommandRegistry.cpp" />
+    <ClCompile Include="src\FileSystemController.cpp" />
+    <ClCompile Include="src\InputRouter.cpp" />
+    <ClCompile Include="src\IntentResolver.cpp" />
+    <ClCompile Include="src\Logger.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\PolicyEngine.cpp" />
+    <ClCompile Include="src\SystemExecutor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CommandParser.h" />
-    <ClInclude Include="CommandRegistry.h" />
-    <ClInclude Include="SecurityValidator.h" />
+    <ClInclude Include="include\ApplicationLauncher.h" />
+    <ClInclude Include="include\AudioController.h" />
+    <ClInclude Include="include\CommandParser.h" />
+    <ClInclude Include="include\CommandRegistry.h" />
+    <ClInclude Include="include\ExecutionResult.h" />
+    <ClInclude Include="include\FileSystemController.h" />
+    <ClInclude Include="include\InputRouter.h" />
+    <ClInclude Include="include\Intent.h" />
+    <ClInclude Include="include\IntentResolver.h" />
+    <ClInclude Include="include\Logger.h" />
+    <ClInclude Include="include\PolicyEngine.h" />
+    <ClInclude Include="include\SecurityValidator.h" />
+    <ClInclude Include="include\SystemExecutor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
