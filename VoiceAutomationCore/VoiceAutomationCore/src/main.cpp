@@ -68,7 +68,10 @@ int main() {
         });
 
 
-    InputRouter router(registry, policy, logger);
+    FileSystemController fileSystem;
+
+    InputRouter router(registry, policy, logger, fileSystem);
+
 
     std::cout << "ZYREX Core started (type 'exit' to quit)\n";
 

@@ -76,6 +76,8 @@ bool FileSystemController::find(const std::vector<std::string>& args) {
         std::cout << i + 1 << ": " << results[i] << "\n";
     }
 
+    lastResults = results;
+
     return true;
 }
 
@@ -111,6 +113,36 @@ bool FileSystemController::openFile(const std::vector<std::string>& args) {
         nullptr,
         "open",
         results[0].c_str(),
+        nullptr,
+        nullptr,
+        SW_SHOWNORMAL
+    );
+
+    if (reinterpret_cast<intptr_t>(result) <= 32) {
+        std::cout << "Failed to open file.\n";
+        return false;
+    }
+
+    return true;
+}
+
+bool FileSystemController::openByIndex(int index) {
+    if (lastResults.empty()) {
+        std::cout << "No previous file list available.\n";
+        return false;
+    }
+
+    if (index < 1 || index > static_cast<int>(lastResults.size())) {
+        std::cout << "Invalid selection number.\n";
+        return false;
+    }
+
+    const std::string& filePath = lastResults[index - 1];
+
+    HINSTANCE result = ShellExecuteA(
+        nullptr,
+        "open",
+        filePath.c_str(),
         nullptr,
         nullptr,
         SW_SHOWNORMAL

@@ -3,9 +3,14 @@
 
 InputRouter::InputRouter(CommandRegistry& registry,
     PolicyEngine& policy,
-    Logger& logger)
-    : registry(registry), policy(policy), logger(logger) {
+    Logger& logger,
+    FileSystemController& fileSystem)
+    : registry(registry),
+    policy(policy),
+    logger(logger),
+    fileSystem(fileSystem) {
 }
+
 
 bool InputRouter::processOnce() {
     std::string input;
@@ -19,7 +24,13 @@ bool InputRouter::processOnce() {
     ParsedCommand parsed = parser.parse(input);
 
     // 2. Resolve intent (WHAT user wants)
-    Intent intent = resolver.resolve(parsed.command, parsed.args);
+    // first for basic Intent intent = resolver.resolve(parsed.command, parsed.args);
+    std::string fullInput = parsed.command;
+    for (const auto& a : parsed.args) {
+        fullInput += " " + a;
+    }
+
+    Intent intent = resolver.resolve(fullInput, {});
 
     // 3. Exit handling
     if (intent.type == IntentType::EXIT_APP) {
@@ -70,6 +81,11 @@ bool InputRouter::processOnce() {
     case IntentType::OPEN_FILE:
         executed = registry.execute("openfile", intent.args);
         break;
+
+    case IntentType::SELECT_OPTION:
+        executed = fileSystem.openByIndex(std::stoi(intent.args[0]));
+        break;
+
 
 
     default:

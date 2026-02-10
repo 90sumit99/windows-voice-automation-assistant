@@ -1,28 +1,26 @@
 #pragma once
-
-#include <string>
-
-#include "CommandParser.h"
 #include "CommandRegistry.h"
-#include "IntentResolver.h"
 #include "PolicyEngine.h"
 #include "Logger.h"
+#include "IntentResolver.h"
+#include "CommandParser.h"
+#include "FileSystemController.h"
 
 class InputRouter {
 public:
     InputRouter(CommandRegistry& registry,
         PolicyEngine& policy,
-        Logger& logger);
+        Logger& logger,
+        FileSystemController& fileSystem);
 
-    // Processes one user input cycle
-    // returns false when application should exit
     bool processOnce();
 
 private:
-    CommandParser parser;
-    IntentResolver resolver;
-
     CommandRegistry& registry;
     PolicyEngine& policy;
     Logger& logger;
+    FileSystemController& fileSystem;   
+
+    CommandParser parser;
+    IntentResolver resolver;
 };

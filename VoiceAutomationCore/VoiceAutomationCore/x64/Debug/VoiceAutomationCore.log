@@ -1,4 +1,13 @@
-﻿  CommandRegistry.cpp
+﻿  ApplicationLauncher.cpp
+  AudioController.cpp
+  CommandParser.cpp
+  CommandRegistry.cpp
+  FileSystemController.cpp
+  InputRouter.cpp
+  IntentResolver.cpp
+  Logger.cpp
   main.cpp
+  PolicyEngine.cpp
+  SystemExecutor.cpp
   Generating Code...
   VoiceAutomationCore.vcxproj -> C:\Users\sumit\Documents\Projects\WindowsVoiceAutomation\VoiceAutomationCore\x64\Debug\VoiceAutomationCore.exe

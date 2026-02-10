@@ -20,6 +20,9 @@ enum class IntentType {
 
 
     RUN_COMMAND,
+
+    SELECT_OPTION,
+
     EXIT_APP
 };
 
