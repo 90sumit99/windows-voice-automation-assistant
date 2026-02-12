@@ -1,4 +1,4 @@
-Perfect. I’m giving you a completely rewritten, professional, job-ready, human-written README that combines:
+
 
 Python Voice Module
 
