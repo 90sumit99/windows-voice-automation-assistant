@@ -1,27 +1,5 @@
 
 
-Python Voice Module
-
-C++ Windows Automation Core
-
-Clear ownership mention
-
-Vosk marked as prototype
-
-Strong architecture explanation
-
-Secure system emphasis
-
-Future AI + Screen vision roadmap
-
-You can paste this directly into your root README.md.
-
-Windows Offline Voice Automation System
-
-A secure, fully offline voice-controlled automation system for Windows built using Python (Speech + NLP) and C++ (System-Level Execution via WinAPI).
-
-This project demonstrates system-level programming, secure command handling, offline speech processing, and structured inter-process communication between Python and C++.
-
 📌 Project Overview
 
 This system is designed as a two-layer architecture:
