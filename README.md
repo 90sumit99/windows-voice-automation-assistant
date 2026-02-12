@@ -1,4 +1,8 @@
+Windows Offline Voice Automation System
 
+A secure, fully offline voice-controlled automation system for Windows built using Python (Speech + NLP) and C++ (System-Level Execution via WinAPI).
+
+This project demonstrates system-level programming, secure command handling, offline speech processing, and structured inter-process communication between Python and C++.
 
 📌 Project Overview
 
