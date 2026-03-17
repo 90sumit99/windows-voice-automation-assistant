@@ -137,7 +137,9 @@
     <ClCompile Include="src\IntentResolver.cpp" />
     <ClCompile Include="src\Logger.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MusicController.cpp" />
     <ClCompile Include="src\PolicyEngine.cpp" />
+    <ClCompile Include="src\ScreenshotController.cpp" />
     <ClCompile Include="src\SystemExecutor.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,7 +153,9 @@
     <ClInclude Include="include\Intent.h" />
     <ClInclude Include="include\IntentResolver.h" />
     <ClInclude Include="include\Logger.h" />
+    <ClInclude Include="include\MusicController.h" />
     <ClInclude Include="include\PolicyEngine.h" />
+    <ClInclude Include="include\ScreenshotController.h" />
     <ClInclude Include="include\SecurityValidator.h" />
     <ClInclude Include="include\SystemExecutor.h" />
   </ItemGroup>

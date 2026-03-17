@@ -1,0 +1,83 @@
+[11:21:04] [SUCCESS] ZYREX Core started — type a command or 'exit' to quit
+[11:21:11] [INFO   ] Input: "hi"
+[11:21:11] [WARNING] Unknown intent for: "hi"
+[11:21:32] [INFO   ] Input: "screenshot"
+[11:21:32] [ERROR  ] Failed: screenshot
+[11:21:48] [INFO   ] Input: "open resume"
+[11:21:51] [ERROR  ] Failed: openfile
+[11:22:03] [INFO   ] Input: "open 1"
+[11:22:03] [SUCCESS] Opened file at index 1
+[11:22:16] [INFO   ] Input: "open spotify"
+[11:22:16] [SUCCESS] Done: open
+[11:22:24] [INFO   ] Input: "close spotify"
+[11:22:24] [ERROR  ] Failed: close
+[11:22:38] [INFO   ] Input: "close spotify"
+[11:22:38] [ERROR  ] Failed: close
+[11:23:03] [INFO   ] Input: "open word"
+[11:23:03] [SUCCESS] Done: open
+[11:23:08] [INFO   ] Input: "close word"
+[11:23:08] [ERROR  ] Failed: close
+[11:23:24] [INFO   ] Input: "exit"
+[11:23:24] [SUCCESS] Goodbye! ZYREX shutting down.
+[11:23:24] [INFO   ] ZYREX shut down cleanly.
+[12:01:05] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[12:01:22] [INFO   ] Input: "open spotify"
+[12:01:22] [SUCCESS] Done: open
+[12:01:32] [INFO   ] Input: "close spotify"
+[12:01:32] [SUCCESS] Done: close
+[12:01:58] [INFO   ] Input: "play shape of you on spotify"
+[12:01:59] [SUCCESS] Done: playmusic
+[12:02:33] [INFO   ] Input: "play shape of you on youtube"
+[12:02:33] [SUCCESS] Done: playmusic
+[12:02:50] [INFO   ] Input: "close spotify"
+[12:02:50] [SUCCESS] Done: close
+[12:03:01] [INFO   ] Input: "took screenshot"
+[12:05:33] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[12:05:55] [INFO   ] Input: "youtube"
+[12:05:55] [WARNING] Unknown intent for: "youtube"
+[12:06:02] [INFO   ] Input: "yaar"
+[12:06:02] [WARNING] Unknown intent for: "yaar"
+[12:06:16] [INFO   ] Input: "play yaar on youtube"
+[12:06:17] [SUCCESS] Done: playmusic
+[12:07:37] [INFO   ] Input: "credit 110rs in my account."
+[12:07:37] [WARNING] Unknown intent for: "credit 110rs in my account."
+[12:50:01] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[12:50:18] [INFO   ] Input: "open spotify"
+[12:50:18] [SUCCESS] Done: open
+[12:50:28] [INFO   ] Input: "close spotify"
+[12:50:29] [SUCCESS] Done: close
+[12:50:35] [INFO   ] Input: "exit"
+[12:50:35] [SUCCESS] Goodbye! ZYREX shutting down.
+[12:50:35] [INFO   ] ZYREX shut down cleanly.
+[12:57:11] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[12:57:14] [INFO   ] Input: "mutee"
+[12:57:14] [SUCCESS] Done: mute
+[12:57:29] [INFO   ] Input: "spotify"
+[12:57:29] [WARNING] Unknown intent for: "spotify"
+[13:00:13] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[13:00:43] [INFO   ] Input: "muteee"
+[13:00:43] [SUCCESS] Done: mute
+[13:00:47] [INFO   ] Input: "mode"
+[13:00:47] [WARNING] Unknown intent for: "mode"
+[13:02:17] [INFO   ] Input: "mutef"
+[13:02:17] [SUCCESS] Done: mute
+[13:03:08] [INFO   ] Input: "mute not"
+[13:03:08] [SUCCESS] Done: mute
+[13:05:57] [INFO   ] Input: "exit"
+[13:05:57] [SUCCESS] Goodbye! ZYREX shutting down.
+[13:05:57] [INFO   ] ZYREX shut down cleanly.
+[14:03:30] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[14:03:34] [INFO   ] Input: "resume"
+[14:03:34] [WARNING] Unknown intent for: "resume"
+[14:03:38] [INFO   ] Input: "fibd resume"
+[14:03:38] [WARNING] Unknown intent for: "fibd resume"
+[14:03:42] [INFO   ] Input: "open resume"
+[14:03:44] [ERROR  ] Failed: openfile
+[14:04:04] [INFO   ] Input: "exit"
+[14:04:04] [SUCCESS] Goodbye! ZYREX shutting down.
+[14:04:04] [INFO   ] ZYREX shut down cleanly.
+[14:05:09] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[14:05:15] [INFO   ] Input: "mute not"
+[14:05:15] [SUCCESS] Done: mute
+[14:05:34] [INFO   ] Input: "play yaari on spotiy"
+[14:05:35] [SUCCESS] Done: playmusic
