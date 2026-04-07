@@ -35,3 +35,96 @@
 [00:59:06] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
 [00:59:43] [INFO   ] Input stream closed. Shutting down.
 [00:59:43] [INFO   ] ZYREX shut down cleanly.
+[09:41:00] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[09:41:09] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[09:41:53] [INFO   ] Input: "play fhilhal"
+[09:41:53] [SUCCESS] Done: mediaplay
+[09:42:08] [INFO   ] Input: "paly yaari on spotify"
+[09:42:08] [WARNING] Unknown intent for: "paly yaari on spotify"
+[09:42:32] [INFO   ] Input: "play yaari on youtube"
+[09:42:33] [SUCCESS] Done: playmusic
+[09:52:03] [INFO   ] Input: "sir, even mine is wrong."
+[09:52:03] [WARNING] Unknown intent for: "sir, even mine is wrong."
+[09:52:03] [INFO   ] Input: "sir, even mine is wrong."
+[09:52:03] [WARNING] Unknown intent for: "sir, even mine is wrong."
+[09:53:10] [INFO   ] Input: "i'll do my own crosshair to the top of the top of the top."
+[09:53:10] [WARNING] Unknown intent for: "i'll do my own crosshair to the top of the top of the top."
+[09:53:11] [INFO   ] Input: "so, my game is on the other side of the room. come on, come on, come on."
+[09:53:11] [WARNING] Unknown intent for: "so, my game is on the other side of the room. come on, come on, come on."
+[09:55:31] [INFO   ] Input: "sir i already give you 14, should i give back?"
+[09:55:31] [WARNING] Unknown intent for: "sir i already give you 14, should i give back?"
+[09:55:32] [INFO   ] Input: "sir, i already give you 14, should i give back?"
+[09:55:32] [WARNING] Unknown intent for: "sir, i already give you 14, should i give back?"
+[09:55:40] [INFO   ] Input: "yes, the protein is good enough. the protein is good enough."
+[09:55:40] [WARNING] Unknown intent for: "yes, the protein is good enough. the protein is good enough."
+[09:55:48] [INFO   ] Input: "so, what are the other things? i'll give it to you."
+[09:55:48] [WARNING] Unknown intent for: "so, what are the other things? i'll give it to you."
+[09:56:23] [INFO   ] Input: "i'm going to go to the internet and tell you what i'm saying. hello, i'm ava jalis."
+[09:56:23] [WARNING] Unknown intent for: "i'm going to go to the internet and tell you what i'm saying. hello, i'm ava jalis."
+[09:56:24] [INFO   ] Input: "so internet is going to be going on now. hello! now i'll go to the police."
+[09:56:24] [WARNING] Unknown intent for: "so internet is going to be going on now. hello! now i'll go to the police."
+[10:00:05] [INFO   ] Input: "exit"
+[10:00:05] [SUCCESS] Goodbye! ZYREX shutting down.
+[10:00:05] [INFO   ] ZYREX shut down cleanly.
+[10:00:08] [INFO   ] Input stream closed. Shutting down.
+[10:00:08] [INFO   ] ZYREX shut down cleanly.
+[15:37:49] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[15:38:27] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[15:38:48] [INFO   ] Input: "close spotify"
+[15:38:48] [SUCCESS] Done: close
+[15:38:55] [INFO   ] Input: "open spotify"
+[15:38:55] [SUCCESS] Done: open
+[15:39:22] [INFO   ] Input: "play competiti on spotify"
+[15:39:22] [SUCCESS] Done: playmusic
+[15:40:02] [INFO   ] Input stream closed. Shutting down.
+[15:40:02] [INFO   ] ZYREX shut down cleanly.
+[21:25:12] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[21:30:07] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[21:31:48] [INFO   ] Input stream closed. Shutting down.
+[21:31:48] [INFO   ] ZYREX shut down cleanly.
+[21:31:48] [INFO   ] Input stream closed. Shutting down.
+[21:31:48] [INFO   ] ZYREX shut down cleanly.
+[21:32:03] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[21:32:37] [INFO   ] Input: "mute"
+[21:32:38] [SUCCESS] Done: mute
+[21:45:57] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[21:49:41] [INFO   ] Input stream closed. Shutting down.
+[21:49:41] [INFO   ] ZYREX shut down cleanly.
+[21:49:41] [INFO   ] Input stream closed. Shutting down.
+[21:49:41] [INFO   ] ZYREX shut down cleanly.
+[21:49:56] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[21:50:23] [INFO   ] Input: "notepad.exe"
+[21:50:23] [WARNING] Unknown intent for: "notepad.exe"
+[21:55:07] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[21:55:18] [INFO   ] Input: "start notepad.exe"
+[21:55:19] [SUCCESS] Done: open
+[22:08:17] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[22:10:25] [INFO   ] Input stream closed. Shutting down.
+[22:10:25] [INFO   ] ZYREX shut down cleanly.
+[22:10:28] [INFO   ] Input: "exit"
+[22:10:28] [SUCCESS] Goodbye! ZYREX shutting down.
+[22:10:28] [INFO   ] ZYREX shut down cleanly.
+[22:10:48] [INFO   ] Input stream closed. Shutting down.
+[22:10:48] [INFO   ] ZYREX shut down cleanly.
+[00:01:24] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[00:02:56] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[00:06:51] [SUCCESS] ZYREX Core started. Type a command or 'exit' to quit.
+[00:08:11] [INFO   ] Input: "start spotify:"
+[00:08:12] [SUCCESS] Done: open
+[00:13:15] [INFO   ] Input: "taskkill /IM spotify.exe /F"
+[00:13:15] [ERROR  ] Failed: close
+[00:13:28] [INFO   ] Input: "start spotify:"
+[00:13:28] [SUCCESS] Done: open
+[00:13:42] [INFO   ] Input: "taskkill /IM spotify.exe /F"
+[00:13:42] [ERROR  ] Failed: close
+[00:14:01] [INFO   ] Input: "start spotify:"
+[00:14:01] [SUCCESS] Done: open
+[00:14:08] [INFO   ] Input: "mute"
+[00:14:08] [SUCCESS] Done: mute
+[00:14:20] [INFO   ] Input: "mute"
+[00:14:20] [SUCCESS] Done: mute
+[00:23:13] [INFO   ] Input: "exit"
+[00:23:13] [SUCCESS] Goodbye! ZYREX shutting down.
+[00:23:13] [INFO   ] ZYREX shut down cleanly.
+[00:23:16] [INFO   ] Input stream closed. Shutting down.
+[00:23:16] [INFO   ] ZYREX shut down cleanly.

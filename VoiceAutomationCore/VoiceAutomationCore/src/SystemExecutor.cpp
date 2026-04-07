@@ -15,7 +15,7 @@ static std::wstring toWide(const std::string& s) {
     return w;
 }
 
-static bool launchCmd(const std::string& command, bool blocking) {
+static bool launchCmd(const std::string& command, bool blocking, bool captureOutput = false) {
     std::string cmdStr  = "cmd.exe /C " + command;
     std::wstring wCmd   = toWide(cmdStr);
     std::vector<wchar_t> buf(wCmd.begin(), wCmd.end());
@@ -24,24 +24,57 @@ static bool launchCmd(const std::string& command, bool blocking) {
     STARTUPINFOW si{};
     PROCESS_INFORMATION pi{};
     si.cb = sizeof(si);
+    SECURITY_ATTRIBUTES sa{};
+    sa.nLength = sizeof(sa);
+    sa.bInheritHandle = TRUE;
+    sa.lpSecurityDescriptor = nullptr;
+
+    HANDLE readPipe = nullptr;
+    HANDLE writePipe = nullptr;
+    if (captureOutput) {
+        if (!CreatePipe(&readPipe, &writePipe, &sa, 0)) {
+            std::cout << "[Executor] Failed to create output pipe.\n";
+            return false;
+        }
+        SetHandleInformation(readPipe, HANDLE_FLAG_INHERIT, 0);
+        si.dwFlags |= STARTF_USESTDHANDLES;
+        si.hStdOutput = writePipe;
+        si.hStdError = writePipe;
+    }
 
     BOOL ok = CreateProcessW(nullptr, buf.data(),
-                             nullptr, nullptr, FALSE, 0,
+                             nullptr, nullptr, captureOutput ? TRUE : FALSE, 0,
                              nullptr, nullptr, &si, &pi);
+    if (captureOutput && writePipe) {
+        CloseHandle(writePipe);
+        writePipe = nullptr;
+    }
     if (!ok) {
         std::cout << "[Executor] Failed to launch: " << command << "\n";
+        if (readPipe) CloseHandle(readPipe);
         return false;
     }
 
     if (blocking) {
+        if (captureOutput && readPipe) {
+            char outBuf[4096];
+            DWORD bytesRead = 0;
+            while (ReadFile(readPipe, outBuf, sizeof(outBuf) - 1, &bytesRead, nullptr) && bytesRead > 0) {
+                outBuf[bytesRead] = '\0';
+                std::cout << "[CMD-OUT] " << outBuf;
+            }
+            CloseHandle(readPipe);
+        }
         WaitForSingleObject(pi.hProcess, INFINITE);
         DWORD exitCode = 0;
         GetExitCodeProcess(pi.hProcess, &exitCode);
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
+        std::cout << "[Executor] Exit code: " << exitCode << "\n";
         return exitCode == 0;
     }
 
+    if (readPipe) CloseHandle(readPipe);
     CloseHandle(pi.hProcess);
     CloseHandle(pi.hThread);
     return true;
@@ -63,7 +96,7 @@ bool SystemExecutor::run(const std::vector<std::string>& args) {
     }
 
     std::cout << "[Executor] Running: " << command << "\n";
-    return launchCmd(command, true);
+    return launchCmd(command, true, true);
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -82,7 +115,7 @@ bool SystemExecutor::runAsync(const std::vector<std::string>& args) {
     }
 
     std::cout << "[Executor] Running async: " << command << "\n";
-    return launchCmd(command, false);
+    return launchCmd(command, false, false);
 }
 
 // ─────────────────────────────────────────────────────────────

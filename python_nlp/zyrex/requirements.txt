@@ -3,4 +3,9 @@ sounddevice
 numpy
 PyQt6
 psutil
+flask
+flask-cors
+google-generativeai
+pyttsx3
+pyautogui
 

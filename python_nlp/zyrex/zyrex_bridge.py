@@ -127,6 +127,7 @@ class ZyrexBridge:
                     state.success("C++ Core ready.")
                 else:
                     state.info(f"← {line}")
+                self._result_queue.put(line)
 
         except Exception as e:
             state.error(f"C++ output read error: {e}")
@@ -140,6 +141,16 @@ class ZyrexBridge:
     # ─────────────────────────────────────────────────────────
     def is_connected(self) -> bool:
         return self._running and self._process is not None
+
+    def drain_output(self, max_lines: int = 60) -> list[str]:
+        """Drain recent C++ output lines from internal queue."""
+        lines = []
+        while len(lines) < max_lines:
+            try:
+                lines.append(self._result_queue.get_nowait())
+            except queue.Empty:
+                break
+        return lines
 
     # ─────────────────────────────────────────────────────────
     #  STOP

@@ -515,3 +515,31 @@ html, body {
   transition: all 0.15s; letter-spacing: 0.5px;
 }
 .log-clr-btn:hover { border-color: rgba(239,68,68,0.4); color: #ef4444; }
+
+/* Voice toggle button */
+.voice-btn {
+  padding: 8px 22px; border-radius: 24px; cursor: pointer;
+  font-family: var(--font); font-size: 11px; font-weight: 700;
+  letter-spacing: 1.5px; border: 1px solid; transition: all 0.22s;
+  display: flex; align-items: center; gap: 8px;
+}
+.voice-btn.on {
+  color: var(--green); border-color: rgba(34,197,94,0.45);
+  background: rgba(34,197,94,0.08);
+  box-shadow: 0 0 18px rgba(34,197,94,0.12);
+}
+.voice-btn.on:hover {
+  background: rgba(34,197,94,0.15);
+  box-shadow: 0 0 28px rgba(34,197,94,0.22);
+}
+.voice-btn.off {
+  color: var(--gray3); border-color: var(--gray4);
+  background: transparent;
+}
+.voice-btn.off:hover {
+  color: var(--orange2); border-color: var(--ob2);
+  background: var(--ob4);
+}
+.vb-dot { width: 7px; height: 7px; border-radius: 50%; }
+.voice-btn.on  .vb-dot { background: var(--green); box-shadow: 0 0 8px var(--green); animation: dot-pulse 1.5s ease-in-out infinite; }
+.voice-btn.off .vb-dot { background: var(--gray3); }

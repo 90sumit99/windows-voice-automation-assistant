@@ -155,6 +155,7 @@ function App() {
   const st  = s.status||'OFFLINE'
   const col = SC[st]||'#525252'
   const send = () => { if(inp.trim()){ post(inp.trim()); setInp('') } }
+  const toggleVoice = async () => { try { const r = await fetch(`${API}/voice-toggle`,{method:'POST'}); const d = await r.json(); state_info = d.voice } catch(e){} }
 
   const fT = now.toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'})
   const fD = now.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'2-digit',year:'numeric'})
@@ -253,6 +254,19 @@ function App() {
           h('div',{className:'mic-status',style:{color:col}},st),
           h(Waveform,{bars:s.waveform,status:st}),
           h('div',{className:'wake-pill'},'Wake Word: ',h('strong',null,'"Hey Zyrex"')),
+
+          h('button',{
+            className: (st==='LISTENING'||st==='IDLE'||st==='EXECUTING'||st==='PROCESSING') ? 'voice-btn on' : 'voice-btn off',
+            onClick: async () => {
+              try { await fetch(API+'/voice-toggle', {method:'POST'}) } catch(e) {}
+            }
+          },
+            h('div', {className:'vb-dot'}),
+            st==='OFFLINE'    ? 'VOICE OFFLINE'    :
+            st==='LISTENING'  ? 'LISTENING...'  :
+            st==='PROCESSING' ? 'PROCESSING...' :
+            st==='EXECUTING'  ? 'EXECUTING...'  : 'VOICE ACTIVE'
+          ),
 
           s.current_command && h('div',{className:'last-box'},
             h('div',{className:'last-box-label'},'LAST COMMAND'),
